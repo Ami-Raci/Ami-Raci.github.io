@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Insert what you want the website tab to be named PLZ)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;0,800;0,900;1,600;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2db8503950.js" crossorigin="anonymous"></script>    
+    <link rel="icon" type="image/x-icon" href="/Users/ami/Pictures/sweet-berry-favicon.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id = "navbar">
+        <nav>
+            <h1>Sweetberry</h1>
+
+            <ul>
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a href="careers.html">CAREERS></a>
+                    <ul>
+                        <li><a href="job1.html">JOB-1</a></li>
+                        <li><a href="job2.html">JOB-2</a></li>
+                        <li><a href="job3.html">JOB-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact-us.html">CONTACT US</a></li>
+            </ul> 
+        </nav>
+    </div>
+    
+    <form> 
+    <!-- Application Form -->
+        <section>
+            <!-- Personal Information -->
+            <h1> Interested in Joining our Team?</h1>
+            <h3>Personal Information</h3>
+
+            <!-- Name -->
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="applicant-name" required><br>    <!-- Displays a text input field -->
+            <label for="mname">Middle Name:</label><br>
+            <input type="text" id="mname" name="applicant-name"><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="applicant-name" required><br> 
+
+            <!-- Contact Information -->
+            <label for="email-address">Email Address:</label><br>
+            <input type="email" id="email-address" name="contact-info" required><br>	
+            <label for="phone-num">Phone Number:</label><br>
+            <input type="tel" id="phone-num" name="contact-info" required><br>	
+
+            <!-- Age -->
+            <p>Applicants must be 18 or older to work for this company</p>
+            <label>Are you 18 or older?</label><br>
+            <input type="radio" value="yes" id="yes-1" name="radio-option" required>
+            <label for="radio-option">Yes</label><br>
+            <input type="radio" value="no" id="no-1" name="radio-option" required>
+            <label for="radio-option">No</label><br>
+
+            <!-- Address -->
+            <p>Applicants must live in the US in order to work for this company</p>
+            <label>Do you live in the US?</label><br>
+            <input type="radio" value="yes" id="yes-2" name="radio-option" required>
+            <label for="radio-option">Yes</label><br>
+            <input type="radio" value="no" id="no-2" name="radio-option" required>
+            <label for="radio-option">No</label><br>
+
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address-info" required><br>
+            <label for="city">City:</label><br>
+            <input type="text" id="city" name="address-info" required><br>
+            <label for="state">State:</label><br>
+            <input type="text" id="state" name="address-info" required><br>
+            <label for="zip-code">Zip Code:</label><br>
+            <input type="text" id="zip-code" name="address-info" required>
+        </section>
+
+        <section>
+            <!-- Job Selection -->
+            <h3>Position Desired</h3>
+
+            <p>Which position are you applying for?</p>
+            <input type="radio" value="manager" id="manager" name="radio-option" required>
+            <label for="radio-option">Cashier Manager</label><br>
+            <input type="radio" value="office-clerk" id="office-clerk" name="radio-option" required>
+            <label for="radio-option">Customer Service Associate</label><br>
+            <input type="radio" value="assistant-accountant" id="assistant-accountant" name="radio-option" required>
+            <label for="radio-option">Barista/Crepe Maker</label>
+        </section>
+
+        <section>
+            <!-- Attach Resume -->
+            <h3>Resume</h3>
+
+            <label for="resume">Please attach your resume here:</label><br>
+            <input type="file" required>
+        </section>
+        
+        <section>
+            <!-- Applicant Education -->
+            <h3>Education</h3>
+
+            <p>What is your student status?</p>
+            <input type="checkbox" value="hs-graduate" id="hs-graduate" name="education" required>
+            <label for="checkbox-option">High school graduate</label><br>
+            <input type="checkbox" value="college-student?" id="college-student" name="education" required>
+            <label for="checkbox-option">College student</label><br>
+            <input type="checkbox" value="college-graduate" id="college-graduate" name="education" required>
+            <label for="checkbox-option">College graduate</label><br>
+
+            <label for="degree">What is your degree in?:</label><br>  <!-- Ask ONLY is applicant checked that they are/were in college-->
+            <input type="text" id="degree" name="education">
+        </section>
+
+        <section>
+            <!-- Applicant Experience -->
+            <h3>Experience</h3>
+            <label for="experience">Please state any prior work experience you have:</label><br>
+            <input type="text" id="experience" name="experience" required><br>
+
+            <label for="experience">In addition to your work history, are there other skills, qualifications, 
+                                     or experience that we should consider?:</label><br>
+            <input type="text" id="experience" name="experience" required>
+        </section>
+
+        <section>
+            <!-- Availability (potenial start date & shift times)-->
+            <h3>Availability</h3>
+
+            <label for="date">What date are you available to start working?:</label><br>
+            <input type="date" id="date-available" name="date-available" required><br> 
+
+            <p>What times are you available to work?</p><br>
+            <label for="sunday">Sunday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours"><br>
+            <label for="monday">Monday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours" required><br> 
+            <label for="tuesday">Tuesday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours" required><br>
+            <label for="wednesday">Wednesday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours"><br>
+            <label for="thursday">Thursday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours" required><br> 
+            <label for="friday">Friday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours" required><br> 
+            <label for="saturday">Saturday:</label><br>
+            <input type="text" id="available-work-hours" name="available-work-hours" required><br>
+
+        </section>
+
+        <input type="submit"> <!-- Displays a button for submitting the form -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,557 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Default Text Aspects */
+h1{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+h2{
+    margin-top: 25px;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+p{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+section{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Navigation bar */
+#navbar{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 230, 230);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+#navbar nav h1{
+    padding: 0;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    position: relative;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav a{
+    display: block;
+    padding: 0px 15px;
+    color: #000000;
+    line-height: 45px;
+    text-decoration: none;
+}
+   
+nav ul ul{
+    /* Hides the dropdown menu for careers by default */
+    display: none;
+    position: absolute;
+}
+
+nav ul li:hover{
+    /* Changes the color of nav-links on hover*/
+    background-color: rgb(253, 198, 198);
+}
+
+    
+nav ul li:hover > ul{
+    /* Displays dropdown menu on hover */
+    display: inherit;
+}
+
+nav ul ul li{
+    background-color: rgb(255, 230, 230);
+    float: none;
+    display: grid;
+    position: relative;
+}
+
+
+/* Footer */
+footer{
+    display: block;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #000000;
+    color: #fff;
+}
+
+footer ul{
+    text-align: left;
+    list-style: none;
+}
+
+footer ul li{
+    display: inline-block;
+    text-decoration: none;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+footer ul li a::before{
+    content: "|";
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+footer img{
+    margin-left: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+/* Homepage */
+    /* Header */
+.header-image-container{
+    position: relative;
+}
+
+.header-image-container::before{
+    /* Adds the darker color overlay to the image  */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.header-image-container img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.home-header-overlay-text{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#fff;
+    color: #000000;
+    padding: 1.5%;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+    border-radius: 1%;
+}
+
+    /* "News" Section*/
+.news{
+    position: block;
+    background-color: #fff;
+    margin-top: 165px;
+}
+
+.news-image-container{
+    position: relative;
+}
+
+.news-image-container::before{
+    /* Adds the darker color overlay to the image  */
+    position: absolute;
+    content: "";
+    display: block;
+    background-size: cover;
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+} 
+
+.news-image-container img{
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60%;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
+}
+
+.news-overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    opacity: 90%;
+}
+
+    /* About Us Section */
+.about-us{
+    background-color:rgb(255, 230, 230);
+    padding: 50px;
+    margin-bottom: 0;
+}
+
+ @media all and (max-width: 800px) {
+    .about-us .container{
+        display: block;
+    }
+
+    .about-us img{
+        width: 80%;
+    }
+}
+
+
+.about-us .container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us img{
+    float: center;
+    width: 270px;
+    height: 305px;
+}
+
+.about-us p{
+    float: center;
+    width: 360px;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+    /* Site Overview Section */
+.overview{
+    margin: auto;
+    width: 80%;
+}
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.overview-col{
+    flex-basis: 41%;
+    background: #ffb8b8;
+    border-radius: 1%;
+    padding: 5%;
+    margin-bottom: 5%;
+    transition: 0.5s;
+    box-sizing: border-box;
+}
+
+.overview-col:hover{
+    box-shadow: 0 0 20px #cbc1c1;
+}
+
+.learn-more-btn{
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    border: #000000;
+}
+
+.learn-more-btn::after{
+    /* Creates an underline under the "learn more" link */
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+
+.learn-more-btn:hover::after{
+    /* Animates the underline's appearance */
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+/* Career Overview Page */
+.job-overview{
+    background-color: #efefef2d;
+    padding-top: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 0;
+}
+
+
+.job-type-btn{
+    margin: auto;    
+    margin-top: 10px;
+    background-color: rgb(222, 222, 222);
+    color: #000000;
+    width: fit-content;
+    padding: 2px 8px;
+    border-radius: 2px;
+}
+
+.job-col{
+    flex-basis: 30%;
+    background: #ffffff;
+    margin-bottom: 5%;
+    padding: 20px  12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    border: #0101018e solid 0.5px;
+    border-radius: 2px;
+}
+
+.job-col a{
+    text-decoration: none;
+    color: #000;
+}
+
+.job-col:hover{
+    box-shadow: 0 0 20px #cbc1c1;
+}
+
+.job-benefits{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color:rgb(255, 230, 230);
+}
+
+
+/* Career Description Pages */
+    /* Header */
+
+.jobs-header{
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.jobs-header h1{
+    text-align: left;
+    color: #000;
+}
+
+.job-info ul{
+    list-style: none;
+}
+
+.job-info a{
+    text-decoration: none;
+    color: #000;
+}
+
+.job-description{
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.job-description p{
+    text-align: left;
+}
+
+.job-description ul li{
+    margin-left: 35px;
+}
+
+.job-description ul li p{
+    list-style-position: inside;
+}
+
+.job-description a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    color: #000;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.asterisk{
+    color:#bb0808;
+}
+
+.apply-now-btn{
+    display: inline-block;
+    margin-left: 25px;
+    margin-bottom: 50px;
+    padding: 5px 25px;
+    color: #ffffff;
+    background-color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-color: #ff0000;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pre-footer{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: inset(2% 0 35% 0);
+}
+.pre-footer img::before{
+    /* Adds the darker color overlay to the image  */
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Contact Us Page*/
+.store-info{
+    margin: auto;
+}
+
+/* Application Form */
+
+form{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    background-color: #fff; 
+    border: #000 1px;
+    border-radius: 2px;
+    background-color: #d9d9d9;
+}
+
+form section{
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 35px 25px 45px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+form h3{
+    text-align: left;
+}
+
+label{
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+label[required]::after{                                     /*GET BACK TO THIS*/
+    content: "*";
+    color: #bb0808;
+}
+
+input[type="text"]{
+    width: 100%; 
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+
+input[type="email"]{
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+
+input[type="tel"]{
+    width: 100%;
+    margin-bottom: 35px;
+    font-size: 20px;
+}
+
+input[type="radio"]{
+    margin-left: 2%;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #000;
+    top: 30px;
+    border-radius: 50%;
+}
+
+label[for=radio-option]{
+    margin-top: 200px;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+input[type="checkbox"]{
+    margin-left: 2%;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #000;
+}
+
+label[for=checkbox-option]{
+    font-weight: 100;
+    font-size: 20px;
+}
+
+form p{
+    margin-top: 20px;
+    text-align: left;
+    font-size: 25px;     
+}
+
+input[type="sumbit"]{
+    margin-left: 15%;
+    padding: 15px 5px;
+    border: 3px solid #000;
+}
