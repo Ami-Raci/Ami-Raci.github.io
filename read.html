@@ -1,0 +1,82 @@
+        <!-- Address -->
+        <section>
+            <h3>Home Address</h3>
+            <h6>Note: Applicants must be US citizens to able to work for this company</h6>
+            <label for="address" class="req">Address</label><br>
+            <input type="text" name="address" class="text-input-option" required><br>
+            <label for="city" class="req">City</label><br>
+            <input type="text" name="city" class="text-input-option" required><br>
+            <label for="state" class="req">State</label><br>
+            <input type="text" name="state" class="text-input-option" required><br>
+            <label for="zip-code" class="req">Zip Code</label><br>
+            <input type="text" name="zip-code" class="text-input-option" required>
+        </section>
+
+        <!-- Job Selection -->
+        <section>    
+            <h3>Position Desired</h3>
+            <label class="req">Which position are you applying for?</label><br>
+            <input type="radio" value="cashier-manager" name="position" required>
+            <label for="radio-option">Cashier Manager</label><br>
+            <input type="radio" value="customer-service-associate" name="position" required>
+            <label for="radio-option">Customer Service Associate</label><br>
+            <input type="radio" value="barista/crepe-maker" name="position" required>
+            <label for="radio-option">Barista/Crepe Maker</label>
+        </section>
+
+        <!-- Resume -->
+        <section>    
+            <h3>Resume</h3>
+            <label for="resume" class="req">Please attach your resume below</label><br>
+            <input type="file" name="resume" required>
+        </section>
+        
+        <!-- Education -->
+        <section>    
+            <h3>Education</h3>
+            <label class="req">What is your student status?</label><br>
+            <input type="radio" value="hs-student" name="education" required>
+            <label for="radio-option">High school student</label><br>
+            <input type="radio" value="hs-graduate" name="education" required>
+            <label for="radio-option">High school graduate</label><br>
+            <input type="radio" value="college-student" name="education" required>
+            <label for="radio-option">College student</label><br>
+            <input type="radio" value="college-graduate" name="education" required>
+            <label for="radio-option">College graduate</label><br>
+        </section>
+
+        <!-- Experience -->
+        <section>    
+            <h3>Experience</h3>
+            <label for="experience" class="req">Please state any prior work experience you have</label><br>
+            <input type="text" name="experience" class="text-input-option" required><br>
+
+            <label for="experience">
+                In addition to your work history, are there other skills, qualifications, 
+                or experience that we should consider?</label><br>
+            <input type="text" name="other-experience" class="text-input-option">
+        </section>
+
+        <!-- Availability (potenial start date & shift times)-->
+        <section>
+            <h3>Availability</h3>
+
+            <label for="date" class="req">What date are you available to start working?</label><br>
+            <input type="date" name="start-date" required><br> 
+
+            <label>What times are you available to work?</label><br>
+            <label for="work-hours" class="req">Sunday</label><br>
+            <input type="text" name="sun-work-hours" class="text-input-option" required><br>
+            <label for="work-hours" class="req">Monday</label><br>
+            <input type="text" name="mon-work-hours" class="text-input-option" required><br> 
+            <label for="work-hours" class="req">Tuesday</label><br>
+            <input type="text" name="tues-work-hours" class="text-input-option" required><br>
+            <label for="work-hours" class="req">Wednesday</label><br>
+            <input type="text" name="wed-work-hours" class="text-input-option" required><br>
+            <label for="work-hours" class="req">Thursday</label><br>
+            <input type="text" name="thurs-work-hours" class="text-input-option" required><br> 
+            <label for="work-hours" class="req">Friday</label><br>
+            <input type="text" name="fri-work-hours" class="text-input-option" required><br> 
+            <label for="work-hours" class="req">Saturday</label><br>
+            <input type="text" name="sat-work-hours" class="text-input-option" required><br>
+        </section>

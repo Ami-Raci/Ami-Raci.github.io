@@ -38,70 +38,150 @@ section{
     margin-bottom: 50px;
 }
 
-/* Navigation bar */
+/*Navbar test*/
 #navbar{
-    display: block;
     position: fixed;
-    z-index: 1;
     top: 0;
+    z-index: 1;
     width: 100%;
-    background-color: rgb(255, 230, 230);
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
 }
 
-#navbar nav h1{
+.logo{
     padding: 0;
-    margin-left: 10px;
     font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    margin-left: 10px;
 }
 
 nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: rgb(251, 216, 216);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-size: cover;
 }
 
 nav ul{
+    width: 100%;
     list-style: none;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: right;
 }
 
-nav ul li{
-    display: inline-block;
+nav li{
+    height: 50px;
+    display: block; 
 }
 
 nav a{
-    display: block;
-    padding: 0px 15px;
-    color: #000000;
-    line-height: 45px;
+    height: 100%;
     text-decoration: none;
-}
-   
-nav ul ul{
-    /* Hides the dropdown menu for careers by default */
-    display: none;
-    position: absolute;
+    display: flex;
+    padding: 0px 15px;
+    align-items: center;
+    color: #000;
 }
 
-nav ul li:hover{
-    /* Changes the color of nav-links on hover*/
+nav a:hover{
+    /* Changes the color of nav-links on hover */
     background-color: rgb(253, 198, 198);
 }
 
-    
-nav ul li:hover > ul{
-    /* Displays dropdown menu on hover */
-    display: inherit;
+nav li:first-child{
+    margin-right: auto;
 }
 
-nav ul ul li{
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1;
+    background-color: rgb(255, 244, 244);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.sidebar .fa-solid{
+    margin-left: 10px;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.x-btn{
     background-color: rgb(255, 230, 230);
-    float: none;
-    display: grid;
-    position: relative;
+}
+
+.return-btn{
+    background-color: rgb(255, 230, 230);
+}
+
+@media all and (max-width: 1280px) {
+    /* Shows side navigation bar*/
+
+    .hideOnMobile{
+        display: none;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    ul{
+        list-style: none;
+        display: block;
+        justify-content: flex-end;
+        align-items: right;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    nav ul li > ul{
+        display: block;
+        position: relative;
+    } 
+
+    #site-overview-sidebar{
+        width: 100%;
+    }
+
+    #career-section-sidebar{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 1280px){
+    /* Shows top navigation bar*/
+
+    nav ul li > ul{
+        /* Hides the dropdown menu for careers by default */
+        display: none;
+        position:inherit;
+        background-color: rgb(251, 216, 216);
+    } 
+    
+    nav ul li:hover > ul{
+        /* Displays dropdown menu on hover */
+        display: inherit;
+    }
 }
 
 
@@ -121,7 +201,7 @@ footer ul{
 }
 
 footer ul li{
-    display: inline-block;
+    display: block;
     text-decoration: none;
 }
 
@@ -131,9 +211,18 @@ footer ul li a{
 }
 
 footer ul li a::before{
-    content: "|";
     margin-left: 5px;
     margin-right: 10px;
+}
+
+@media screen and (min-width: 800px) {
+    footer ul li a::before{
+        content: "|";
+    }
+
+    footer ul li{
+        display: inline-block;
+}
 }
 
 footer img{
@@ -141,6 +230,7 @@ footer img{
     width: 20px;
     height: 20px;
 }
+
 
 /* Homepage */
     /* Header */
@@ -181,116 +271,67 @@ footer img{
     border-radius: 1%;
 }
 
-    /* "News" Section*/
-.news{
+@media screen and (max-width: 800px){
+    .home-header-overlay-text{
+        transform: translate(-50%, -100%);
+        font-size: 40px;
+        width: 100%;
+    }
+}
+
+     /* Site Overview Section */
+.site-overview{
     position: block;
     background-color: #fff;
-    margin-top: 165px;
-}
-
-.news-image-container{
-    position: relative;
-}
-
-.news-image-container::before{
-    /* Adds the darker color overlay to the image  */
-    position: absolute;
-    content: "";
-    display: block;
-    background-size: cover;
-    margin-left: 5%;
-    width: 90%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-} 
-
-.news-image-container img{
-    display: block;
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    height: 60%;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
-}
-
-.news-overlay-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    opacity: 90%;
-}
-
-    /* About Us Section */
-.about-us{
-    background-color:rgb(255, 230, 230);
-    padding: 50px;
-    margin-bottom: 0;
-}
-
- @media all and (max-width: 800px) {
-    .about-us .container{
-        display: block;
-    }
-
-    .about-us img{
-        width: 80%;
-    }
-}
-
-
-.about-us .container{
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-}
-
-.about-us img{
-    float: center;
-    width: 270px;
-    height: 305px;
-}
-
-.about-us p{
-    float: center;
-    width: 360px;
-    margin-left: 10px;
-    text-align: left;
-    font-size: 25px;
-    line-height: 30px;
-}
-
-    /* Site Overview Section */
-.overview{
-    margin: auto;
-    width: 80%;
 }
 
 .row{
     margin-top: 5%;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .overview-col{
-    flex-basis: 41%;
-    background: #ffb8b8;
-    border-radius: 1%;
-    padding: 5%;
+    background: #fdf8f8;
     margin-bottom: 5%;
-    transition: 0.5s;
+    padding: 5%;
     box-sizing: border-box;
+    transition: 0.5s;
+    border: #0101018e solid 0.5px;
+    border-radius: 2px;
 }
 
 .overview-col:hover{
     box-shadow: 0 0 20px #cbc1c1;
 }
 
-.learn-more-btn{
+@media screen and (max-width: 800px) {
+
+    .row{
+        display: block;
+    }
+
+    .overview-col{
+        margin: 5%;
+        width: 90%; 
+    } 
+}
+
+@media screen and (min-width: 800px) {
+    .site-overview{
+        margin-top: 135px;
+    }
+
+    .row{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .overview-col{
+        flex-basis: 41%; 
+    } 
+}
+
+
+.link-btn{
     display: inline-block;
     position: relative;
     font-size: 15px;
@@ -300,7 +341,7 @@ footer img{
     border: #000000;
 }
 
-.learn-more-btn::after{
+.link-btn::after{
     /* Creates an underline under the "learn more" link */
     content: "";
     position: absolute;
@@ -314,10 +355,69 @@ footer img{
     transition: transform 0.5s ease-out;
 }
 
-.learn-more-btn:hover::after{
+.link-btn:hover::after{
     /* Animates the underline's appearance */
     transform: scaleX(1);
     transform-origin: bottom left;
+}
+
+    /* About Us Section */
+.about-us{
+    background-color:rgb(255, 230, 230);
+    padding: 50px;
+    margin-bottom: 0;
+}
+
+.about-us .container{
+    margin-top: 25px;
+}
+
+.about-us p{
+    text-align: left;
+    line-height: 30px;
+}
+
+.about-us img{
+    margin: auto;
+    height: auto;
+    border: #0000005c solid 0.5px;
+}
+
+.about-us p{
+    margin: auto;
+}
+
+@media all and (max-width: 1000px){
+    .about-us .container{
+        display: block;
+    }
+
+    .about-us img{
+        width: 100%;
+    }
+
+    .about-us p{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    .about-us .container{
+        display: flex;
+    }
+
+    .about-us img{
+        width: 500px;
+        float: center;
+        margin-left: auto;
+    }
+
+    .about-us p{
+        font-size: 20px;
+        width: 500px;
+        float: left;
+        margin-left: 10px;
+    }
 }
 
 
@@ -327,12 +427,11 @@ footer img{
     padding-top: 50px;
     padding-left: 5%;
     padding-right: 5%;
-    margin-bottom: 0;
+    margin: auto;
 }
 
-
 .job-type-btn{
-    margin: auto;    
+    margin-left: 5px;    
     margin-top: 10px;
     background-color: rgb(222, 222, 222);
     color: #000000;
@@ -342,19 +441,27 @@ footer img{
 }
 
 .job-col{
-    flex-basis: 30%;
     background: #ffffff;
-    margin-bottom: 5%;
+    margin: 2% 5% 5% 5%;
     padding: 20px  12px;
     box-sizing: border-box;
     transition: 0.5s;
     border: #0101018e solid 0.5px;
     border-radius: 2px;
+    width: 90%;
 }
 
 .job-col a{
     text-decoration: none;
     color: #000;
+}
+
+.job-col h3{
+    text-align: left;
+}
+
+.job-col p{
+    text-align: left;
 }
 
 .job-col:hover{
@@ -364,8 +471,7 @@ footer img{
 .job-benefits{
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px;
     background-color:rgb(255, 230, 230);
 }
 
@@ -425,100 +531,145 @@ footer img{
 
 .asterisk{
     color:#bb0808;
+    margin-bottom: 50px;
 }
 
-.apply-now-btn{
+.red-btn{
     display: inline-block;
+    width: fit-content;
     margin-left: 25px;
-    margin-bottom: 50px;
     padding: 5px 25px;
     color: #ffffff;
     background-color: #ff0000;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
-    border-color: #ff0000;
+    border: 0.5px solid #0000008d;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.pre-footer{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    clip-path: inset(2% 0 35% 0);
+.apply-now-btn{
+    margin-left: 25px;
+    margin-bottom: 50px;
 }
-.pre-footer img::before{
-    /* Adds the darker color overlay to the image  */
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
+
 
 /* Contact Us Page*/
-.store-info{
-    margin: auto;
+.contact-info-col{
+    justify-content: center;
 }
 
-/* Application Form */
+@media screen and (max-width: 1000px) {
+    .contact-info-col{
+        display: block;
+        width: 100%;
+    }
 
+    .google-map{
+        margin-top: 50px;
+        margin-left: 5%;
+    }
+
+    .google-map iframe{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .contact-info{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contact-info-col{
+        display: inline-block;
+        width: 60%;
+    }
+}
+
+.store-info{
+    margin: 30px 30px 0px 30px;
+    text-align: left;
+    border-bottom: 1px #000 solid;
+
+}
+
+.store-info p{
+    text-align: left;
+}
+
+.google-map{
+    position: relative;
+}
+
+.social-media-info{
+    text-align: center;
+}
+
+.social-media-info a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+/* Application Form */
 form{
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 0;
-    background-color: #fff; 
     border: #000 1px;
     border-radius: 2px;
-    background-color: #d9d9d9;
+    background-color: #f7f7f7;
 }
 
 form section{
-    margin-left: 15%;
-    margin-right: 15%;
     padding: 35px 25px 45px;
     background-color: #ffffff;
-    border-radius: 10px;
+    border-radius: 8px;
+    border: 1px solid #9a99996a;
 }
 
 form h3{
     text-align: left;
 }
 
+form h6{
+    text-align: left;
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+
 label{
     font-size: 25px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0px;
 }
 
-label[required]::after{                                     /*GET BACK TO THIS*/
+.req::after{ 
     content: "*";
-    color: #bb0808;
+    color: #ff0000;
+    font-size: large;
+    position: absolute;
 }
 
-input[type="text"]{
+input{
+    width: 100%;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.text-input-option{
     width: 100%; 
-    margin-bottom: 35px;
     font-size: 20px;
-}
-
-input[type="email"]{
-    width: 100%;
-    margin-bottom: 35px;
-    font-size: 20px;
-}
-
-input[type="tel"]{
-    width: 100%;
-    margin-bottom: 35px;
-    font-size: 20px;
-}
+} 
 
 input[type="radio"]{
+    margin-top: 10px;
     margin-left: 2%;
+    margin-bottom: 10px;
     width: 15px;
     height: 15px;
     border: 3px solid #000;
@@ -526,32 +677,78 @@ input[type="radio"]{
     border-radius: 50%;
 }
 
-label[for=radio-option]{
-    margin-top: 200px;
-    font-weight: 100;
-    font-size: 20px;
-}
-
-input[type="checkbox"]{
-    margin-left: 2%;
-    width: 15px;
-    height: 15px;
-    border: 3px solid #000;
-}
-
-label[for=checkbox-option]{
-    font-weight: 100;
-    font-size: 20px;
-}
-
-form p{
+label[for="radio-option"]{
     margin-top: 20px;
-    text-align: left;
-    font-size: 25px;     
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 20px;
 }
 
-input[type="sumbit"]{
-    margin-left: 15%;
-    padding: 15px 5px;
-    border: 3px solid #000;
+input[type="date"]{
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+label[for=work-hours]{
+    font-size: 20px;
+}
+
+textarea{
+    margin-top: 10px;
+    margin-bottom: 25px;    
+}
+
+#submit{
+    width: auto;
+}
+
+@media screen and (max-width: 800px) {
+    form section{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #submit{
+        margin-left: 2%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    form section{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #submit{
+        margin-left: 15%;
+    }
+}
+
+/* Thank you page (application form redirection page)*/
+.thanks-msg{
+    margin: auto;
+    width: 80%;
+    height: 100vh;
+    background-color:#ffffff;
+    padding-top: 100px;
+}
+
+.fa-envelope{
+    width: 100%;
+}
+
+.thanks-msg p{
+    margin-bottom: 25px;
+}
+
+.redirect-home-btn{
+    padding: 20px 50px;
+    color: #000;
+    background-color: rgb(251, 216, 216);
+}
+
+.center-item{
+    margin: auto;
+    text-align: center;
+    display: block;
 }

@@ -1,0 +1,40 @@
+<!-- Navigation Bar -->
+<div id = "navbar">
+    <nav>
+        <!-- Side Navigation Bar-->
+        <ul class="sidebar" id="site-overview-sidebar">
+            <li class="x-btn" onclick=hideSidebar()><a><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="homepage.html">HOME</a></li>
+            <li onclick=revealCareerOptions()><a>
+                CAREERS
+                <i class="fa-solid fa-chevron-right"></i>
+            </a></li>
+            <li><a href="contact_us.html">CONTACT US</a></li>
+        </ul>
+
+        <!-- Side Navigation Bar: Career Page Sections-->
+        <ul class="sidebar" id="career-section-sidebar">
+            <li class="return-btn" onclick=hideCareerOptions()><a>
+                <i class="fa-solid fa-chevron-left"></i>
+                Return
+            </a></li>
+            <li><a href=careers.html#job_positions>POSITIONS</a></li>
+            <li><a href=careers.html#benefits>BENEFITS</a></li>
+        </ul>
+
+        <!-- Top Navigation Bar-->
+        <ul>
+            <li class="logo">Sweetberry</li>
+            <li class="hideOnMobile"><a href="homepage.html">HOME</a></li>
+            <li class="hideOnMobile"><a>CAREERS</a>
+                <ul>
+                    <li><a href=careers.html#job_positions>POSITIONS</a></li>
+                    <li><a href=careers.html#benefits>BENEFITS</a></li>
+                </ul>
+            </li>
+            <li class="hideOnMobile"><a href="contact_us.html">CONTACT US</a></li>
+            <li class="menu-btn" onclick=showSideBar()><a><i class="fa-sharp fa-solid fa-bars"></i></a></li>
+        </ul>
+    </nav>
+</div>
+

@@ -14,63 +14,42 @@
 </head>
 
 <body>
-    <div id = "navbar">
-        <nav>
-            <h1>WEBSITE NAME</h1>
-
-            <ul>
-                <li><a href="homepage.html">HOME</a></li>
-                <li><a href="careers.html">CAREERS></a>
-                    <ul>
-                        <li><a href="job1.html">JOB-1</a></li>
-                        <li><a href="job2.html">JOB-2</a></li>
-                        <li><a href="job3.html">JOB-3</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact-us.html">CONTACT US</a></li>
-            </ul> 
-        </nav>
-    </div>
+    <!-- Navigation Bar-->
+    <script id="replace_with_navbar" src="index.js"></script>
 
     <!-- Job Overview Section -->  
     <section class="job-overview">
         <h1>FIND THE JOB FOR YOU</h1>
+        <div class="job-col">
+            <a href="cashier_manager.html">
+                <h3>Cashier Manager</h3>
+                <p>Help shape the team that runs our cafe.</p>
+                <div class="job-type-btn">Full-Time</div>
+                <p><a href="cashier_manager.html" class="link-btn">Learn more  ></a></p>
+            </a>
+        </div>
 
-        <div class="row">
-            <div class="job-col">
-                <a href="job1.html">
-                    <h3>Cashier Manager</h3>
-                    <p>Help shape the team that runs our cafe.</p>
-                    <div class="job-type-btn">Full-Time</div>
-                    <p><a href="" class="learn-more-btn">Learn more  ></a></p>
-                </a>
-                
-            </div>
-
-            <div class="job-col">
-                <a href="job2.html">
-                    <h3>Customer Service Associate</h3>
-                    <p>Ensure that our customers' days are sweeter.</p>
-                    <div class="job-type-btn">Part-Time</div>
-                    <p><a href="" class="learn-more-btn">Learn more  ></a></p> 
-                </a>
-                
-            </div>  
+        <div class="job-col">
+            <a href="customer_service_associate.html">
+                <h3>Customer Service Associate</h3>
+                <p>Ensure that our customers' days are sweeter.</p>
+                <div class="job-type-btn">Part-Time</div>
+                <p><a href="customer_service_associate.html" class="link-btn">Learn more  ></a></p> 
+            </a>            
+        </div>  
             
-            <div class="job-col">
-                <a href="job3.html">
-                    <h3>Barista/Crepe Maker</h3>
-                    <p>Guarantee that our customers receive high-quality food.</p>
-                    <div class="job-type-btn">Part-Time</div>
-                    <p><a href="" class="learn-more-btn">Learn more  ></a></p>
-                </a>
-                
-            </div>
-        </div>    
+        <div class="job-col">
+            <a href="barista_crepe_maker.html">
+                <h3>Barista/Crepe Maker</h3>
+                <p>Guarantee that our customers receive high-quality food.</p>
+                <div class="job-type-btn">Part-Time</div>
+                <p><a href="barista_crepe_maker.html" class="link-btn">Learn more  ></a></p>
+            </a>
+        </div>
     </section>
 
     <!-- Job Benefits Section-->
-    <section class="job-benefits">
+    <section class="job-benefits" id="benefits">
         <h1>WHY WORK FOR US?</h1>
         <h3> It's a Wonderful Opportunity</h3>
         <p>If you like to put a smile on people's faces and brighten up their day, working at Sweetberry would
@@ -79,7 +58,7 @@
             employees get to eat at our cafe for free, and they can receive bonuses and promotions in addition to 
             their typical salary based on their behavior. Best of all, you can acquire all of these benefits while 
             working at a time that works well for you. 
-        </p>
+        </p><br>
         
         <h3>We Care About You</h3>
         <p>
@@ -87,26 +66,15 @@
            workers choose their work hours in advance. This flexiblity allows them to ensure that their 
            schedule works for their lifestyle. Another way we prioritize our workers' wellbeing is through the 
            health benefits we provide them with, such as access to health insurance and programs that can help our 
-           team and their family and paid time off. Our paid leave includes sick, maternal and paternal, and vacation 
+           team and their family as well as paid time off. Our paid leave includes sick, maternal and paternal, and vacation 
            leave (the amount of time given is dependent on the time a worker has been employeed and their position). 
-           If you're interested in learning more about our benefits, contact us using the link below.
+           Please contact us if you're interested in learning more about our benefits.
         </p>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <ul>
-            <li>
-                <img src="/Users/ami/Pictures/sweet-berry-favicon.png">
-                Sweetberry
-            </li>
+    <script id="replace_with_footer" src="index.js"></script>
 
-            <li><a href="https://maps.app.goo.gl/kU5EdCwYAwD99vSPA">
-                <i class='fas fa-map-marker-alt'></i>
-                9432 Main Street, Fairfax, VA 22031
-            </a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
-    </footer>
+    <script src="index.js"></script>
 </body>
 </html>

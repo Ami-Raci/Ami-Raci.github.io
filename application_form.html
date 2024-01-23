@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweetberry Careers | Application</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,700;0,800;0,900;1,600;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2db8503950.js" crossorigin="anonymous"></script>    
+    <link rel="icon" type="image/x-icon" href="/Users/ami/Pictures/sweet-berry-favicon.png">
+</head>
+
+<body>
+    <!-- Navigation Bar-->
+    <script id="replace_with_navbar" src="index.js"></script>
+
+    <!-- Application Form --> 
+    <form id="application-form"> 
+        
+        <!-- Personal Information -->
+        <section>
+            <h1> Interested in joining our team?</h1>
+            <h3>Personal Information</h3>
+
+            <!-- Name -->
+            <label for="fname" class="req">First Name</label><br>
+            <input type="text" name="first-name" class="text-input-option" required><br>    <!-- Displays a text input field -->
+            <label for="mname">Middle Name</label><br>
+            <input type="text" name="middle-name" class="text-input-option"><br>
+            <label for="lname" class="req">Last Name</label><br>
+            <input type="text" name="last-name" class="text-input-option" required><br> 
+
+            <!-- Contact Information -->
+            <label for="email-address" class="req">Email Address</label><br>
+            <input type="email" name="email-address" class="text-input-option" required><br>	
+            <label for="phone-num" class="req">Phone Number</label><br>
+            <input type="tel" name="phone-number" class="text-input-option" required><br>	
+
+            <!-- Age -->
+            <label for="age" class="req">Age</label><br>
+            <h6>Note: Applicants must be 16 or older to able to work for this company</h6>
+            <input type="radio" value="minor" name="age" required>
+            <label for="radio-option">16 to 17 years old</label><br>
+            <input type="radio" value="adult" name="age" required>
+            <label for="radio-option">18 years old or older</label><br>
+        </section>
+        
+        <!-- Address -->
+        <section>
+            <h3>Home Address</h3>
+            <h6>Note: Applicants must be US citizens to able to work for this company</h6>
+            <label for="address" class="req">Address</label><br>
+            <input type="text" name="address" class="text-input-option" required><br>
+            <label for="city" class="req">City</label><br>
+            <input type="text" name="city" class="text-input-option" required><br>
+            <label for="state" class="req">State</label><br>
+            <input type="text" name="state" class="text-input-option" required><br>
+            <label for="zip-code" class="req">Zip Code</label><br>
+            <input type="text" name="zip-code" class="text-input-option" required>
+        </section>
+
+        <!-- Job Selection -->
+        <section>    
+            <h3>Position Desired</h3>
+            <label class="req">Which position are you applying for?</label><br>
+            <input type="radio" value="cashier-manager" name="position" required>
+            <label for="radio-option">Cashier Manager</label><br>
+            <input type="radio" value="customer-service-associate" name="position" required>
+            <label for="radio-option">Customer Service Associate</label><br>
+            <input type="radio" value="barista/crepe-maker" name="position" required>
+            <label for="radio-option">Barista/Crepe Maker</label>
+        </section>
+
+        <!-- Resume -->
+        <section>    
+            <h3>Resume</h3>
+            <label for="resume" class="req">Please attach your resume below</label><br>
+            <input type="file" name="resume" required>
+        </section>
+        
+        <!-- Education -->
+        <section>    
+            <h3>Education</h3>
+            <label class="req">What is your student status?</label><br>
+            <input type="radio" value="hs-student" name="education" required>
+            <label for="radio-option">High school student</label><br>
+            <input type="radio" value="hs-graduate" name="education" required>
+            <label for="radio-option">High school graduate</label><br>
+            <input type="radio" value="college-student" name="education" required>
+            <label for="radio-option">College student</label><br>
+            <input type="radio" value="college-graduate" name="education" required>
+            <label for="radio-option">College graduate</label><br>
+        </section>
+
+        <!-- Experience -->
+        <section>    
+            <h3>Experience</h3>
+            <label for="experience" class="req">
+                Please state any prior work experience you have</label><br>
+            <textarea type="text" name="experience" class="text-input-option" required></textarea>
+
+            <label for="experience"> 
+                In addition to your work history, are there other skills, qualifications, 
+                or experience that we should consider?
+            </label><br>
+            <textarea type="text" name="other-experience" class="text-input-option" required></textarea>
+        </section>
+
+        <!-- Availability (potenial start date & shift times)-->
+        <section>
+            <h3>Availability</h3>
+
+            <label for="date" class="req">What date are you available to start working?</label><br>
+            <input type="date" name="start-date" required><br> 
+
+            <label>What times are you available to work?</label><br>
+            <label for="work-hours" class="req">Sunday</label><br>
+            <input type="text" name="sun-work-hours" class="text-input-option" required><br>
+            <label for="work-hours" class="req">Monday</label><br>
+            <input type="text" name="mon-work-hours" class="text-input-option" required><br> 
+            <label for="work-hours" class="req">Tuesday</label><br>
+            <input type="text" name="tues-work-hours" class="text-input-option" required><br>
+            <label for="work-hours" class="req">Wednesday</label><br>
+            <input type="text" name="wed-work-hours" class="text-input-option" required><br>
+            <label for="work-hours" class="req">Thursday</label><br>
+            <input type="text" name="thurs-work-hours" class="text-input-option" required><br> 
+            <label for="work-hours" class="req">Friday</label><br>
+            <input type="text" name="fri-work-hours" class="text-input-option" required><br> 
+            <label for="work-hours" class="req">Saturday</label><br>
+            <input type="text" name="sat-work-hours" class="text-input-option" required><br>
+        </section>    
+
+        <!-- Submit Button-->
+        <button type="submit" class="red-btn" id="submit">Submit</button>
+    </form>
+
+    <!-- Footer -->
+    <script id="replace_with_footer" src="index.js"></script>
+
+    <!-- Script for applicant form submission -->
+    <script src="google_sheet.js"></script>
+</body>
+</html>
