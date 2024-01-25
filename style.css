@@ -216,6 +216,7 @@ footer ul li a::before{
 }
 
 @media screen and (min-width: 800px) {
+    /* On bigger screens the links in the footer should be in a line */
     footer ul li a::before{
         content: "|";
     }
