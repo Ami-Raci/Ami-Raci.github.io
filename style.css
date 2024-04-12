@@ -55,7 +55,7 @@ section{
 }
 
 nav{
-    background-color: rgb(251, 216, 216);
+    background-color: #e252b0;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
     background-position: center;
     background-size: cover;
@@ -85,7 +85,8 @@ nav a{
 
 nav a:hover{
     /* Changes the color of nav-links on hover */
-    background-color: rgb(253, 198, 198);
+    background-color: #f775c9;
+    ;
 }
 
 nav li:first-child{
@@ -98,8 +99,8 @@ nav li:first-child{
     right: 0;
     height: 100vh;
     width: 250px;
-    z-index: 1;
-    background-color: rgb(255, 244, 244);
+    z-index: 1;    
+    background-color: #FFE2EE;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
     display: none;
@@ -125,11 +126,11 @@ nav li:first-child{
 }
 
 .x-btn{
-    background-color: rgb(255, 230, 230);
+    background-color: #e252b0;
 }
 
 .return-btn{
-    background-color: rgb(255, 230, 230);
+    background-color: #e252b0;
 }
 
 @media all and (max-width: 1280px) {
@@ -175,12 +176,13 @@ nav li:first-child{
         /* Hides the dropdown menu for careers by default */
         display: none;
         position:inherit;
-        background-color: rgb(251, 216, 216);
+        background-color: #e252b0;
     } 
     
     nav ul li:hover > ul{
         /* Displays dropdown menu on hover */
         display: inherit;
+        content: "";
     }
 }
 
@@ -235,21 +237,15 @@ footer img{
 
 /* Homepage */
     /* Header */
+    /* HEADING COLORS #F05CBD -- Dark pink color; #FFE2EE-- Lighter pink; #d9d9d9-- Grey */
+.homepage{
+    background-color: #fff;
+}
+
 .header-image-container{
     position: relative;
 }
 
-.header-image-container::before{
-    /* Adds the darker color overlay to the image  */
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-}
 
 .header-image-container img{
     display: block;
@@ -257,26 +253,9 @@ footer img{
     height: auto;
 }
 
-.home-header-overlay-text{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color:#fff;
-    color: #000000;
-    padding: 1.5%;
-    font-size: 60px;
-    font-weight: 600;
-    text-align: center;
-    box-shadow: 0 0 10px 2px rgba(0,0,0,0.3);
-    border-radius: 1%;
-}
-
-@media screen and (max-width: 800px){
-    .home-header-overlay-text{
-        transform: translate(-50%, -100%);
-        font-size: 40px;
-        width: 100%;
+@media screen and (max-width: 1280px) {
+    .header-image-container{
+        top: 50px;
     }
 }
 
@@ -287,24 +266,33 @@ footer img{
 }
 
 .row{
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .overview-col{
-    background: #fdf8f8;
-    margin-bottom: 5%;
     padding: 5%;
+    background-color: #ffe2ee49;
+    margin-bottom: 5%;
     box-sizing: border-box;
     transition: 0.5s;
-    border: #0101018e solid 0.5px;
-    border-radius: 2px;
+    border: #0101014f solid 0.5px;
 }
 
 .overview-col:hover{
     box-shadow: 0 0 20px #cbc1c1;
 }
 
+@media screen and (max-width: 1280px) {
+    .site-overview{
+        margin-top: 75px;
+    }
+}
+
 @media screen and (max-width: 800px) {
+    .hompage h1{
+        text-align: left;
+        font-size: 35px;
+    }
 
     .row{
         display: block;
@@ -317,10 +305,6 @@ footer img{
 }
 
 @media screen and (min-width: 800px) {
-    .site-overview{
-        margin-top: 135px;
-    }
-
     .row{
         display: flex;
         justify-content: space-evenly;
@@ -362,11 +346,10 @@ footer img{
     transform-origin: bottom left;
 }
 
-    /* About Us Section */
+    /* About Us Section ffe2ee43*/
 .about-us{
-    background-color:rgb(255, 230, 230);
+    background-color: #d9d9d960 /*#efefef6c*/;
     padding: 50px;
-    margin-bottom: 0;
 }
 
 .about-us .container{
@@ -424,10 +407,8 @@ footer img{
 
 /* Career Overview Page */
 .job-overview{
-    background-color: #efefef2d;
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-right: 5%;
+    background-color: #efefef6c;
+    padding: 75px 5% 5% 50px;
     margin: auto;
 }
 
@@ -448,7 +429,6 @@ footer img{
     box-sizing: border-box;
     transition: 0.5s;
     border: #0101018e solid 0.5px;
-    border-radius: 2px;
     width: 90%;
 }
 
@@ -470,12 +450,28 @@ footer img{
 }
 
 .job-benefits{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 25px;
-    background-color:rgb(255, 230, 230);
+    background-color: #fff;
+    width: 80%;
+    padding: 2% 10%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0%;
+    border-width: 2px;
 }
 
+.job-benefits h3{
+    text-align: left;
+}
+
+.job-benefits p{
+    text-align: left;
+}
+
+.job-img-container{
+    width: 100%;
+    margin: 10px auto;
+    border: #0101018e solid 0.5px;
+}
 
 /* Career Description Pages */
 .jobs-header{
@@ -511,7 +507,9 @@ footer img{
     margin-left: 35px;
 }
 
-.job-description ul li p{
+.job-description ul li p{ 
+    list-style: inside;
+
     list-style-position: inside;
 }
 
@@ -555,6 +553,10 @@ footer img{
 
 
 /* Contact Us Page*/
+.contact-us{
+    margin-top: 75px;
+}
+
 .contact-info-col{
     justify-content: center;
 }
