@@ -26,7 +26,7 @@ h3{
 }
 
 p{
-    text-align: center;
+    text-align: left;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
@@ -259,14 +259,71 @@ footer img{
     }
 }
 
+    /* Introduction to Crepe Craze Careers Section*/
+.hiring-overview{
+    padding: 10px 50px;
+    position: block;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 1280px) {
+    .hiring-overview{
+        padding: 50px;
+    }
+}
+
+    /* About Us Section*/
+.about-us{
+    justify-content: center;
+    background-color: #d9d9d960;
+    padding: 50px 50px 100px 50px;
+}
+
+.about-us h1{
+    margin-bottom: 25px;
+}
+
+@media all and (max-width: 1280px){
+    .about-us{
+        display: block;
+    }
+
+    .about-us img{
+        width: 100%;
+    }
+
+    .about-us p{
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    .about-us img{
+        width: 40%;
+        float: left;
+    }
+}
+
      /* Site Overview Section */
 .site-overview{
     position: block;
     background-color: #fff;
 }
 
+.site-overview p{
+    text-align: center;
+}
+
+.site-overview h2{
+    padding: 20px 50px;
+}
+
 .row{
     margin-top: 2%;
+}
+
+.social-media-info p{
+    text-align: center;
 }
 
 .overview-col{
@@ -282,18 +339,7 @@ footer img{
     box-shadow: 0 0 20px #cbc1c1;
 }
 
-@media screen and (max-width: 1280px) {
-    .site-overview{
-        margin-top: 75px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .hompage h1{
-        text-align: left;
-        font-size: 35px;
-    }
-
+@media screen and (max-width: 1100px) {
     .row{
         display: block;
     }
@@ -304,7 +350,7 @@ footer img{
     } 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1100px) {
     .row{
         display: flex;
         justify-content: space-evenly;
@@ -346,65 +392,6 @@ footer img{
     transform-origin: bottom left;
 }
 
-    /* About Us Section ffe2ee43*/
-.about-us{
-    background-color: #d9d9d960 /*#efefef6c*/;
-    padding: 50px;
-}
-
-.about-us .container{
-    margin-top: 25px;
-}
-
-.about-us p{
-    text-align: left;
-    line-height: 30px;
-}
-
-.about-us img{
-    margin: auto;
-    height: auto;
-    border: #0000005c solid 0.5px;
-}
-
-.about-us p{
-    margin: auto;
-}
-
-@media all and (max-width: 1000px){
-    .about-us .container{
-        display: block;
-    }
-
-    .about-us img{
-        width: 100%;
-    }
-
-    .about-us p{
-        width: 100%;
-    }
-}
-
-@media all and (min-width: 1000px) {
-    .about-us .container{
-        display: flex;
-    }
-
-    .about-us img{
-        width: 500px;
-        float: center;
-        margin-left: auto;
-    }
-
-    .about-us p{
-        font-size: 20px;
-        width: 500px;
-        float: left;
-        margin-left: 10px;
-    }
-}
-
-
 /* Career Overview Page */
 .job-overview{
     background-color: #efefef6c;
@@ -441,10 +428,6 @@ footer img{
     text-align: left;
 }
 
-.job-col p{
-    text-align: left;
-}
-
 .job-col:hover{
     box-shadow: 0 0 20px #cbc1c1;
 }
@@ -460,10 +443,6 @@ footer img{
 }
 
 .job-benefits h3{
-    text-align: left;
-}
-
-.job-benefits p{
     text-align: left;
 }
 
@@ -497,10 +476,6 @@ footer img{
     margin-top: 10px;
     margin-left: 25px;
     margin-right: 25px;
-}
-
-.job-description p{
-    text-align: left;
 }
 
 .job-description ul li{
@@ -557,11 +532,15 @@ footer img{
     margin-top: 75px;
 }
 
+.contact-centered-text p{
+    text-align: center;
+}
+
 .contact-info-col{
     justify-content: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     .contact-info-col{
         display: block;
         width: 100%;
@@ -577,7 +556,7 @@ footer img{
     }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1100px) {
     .contact-info{
         display: flex;
         justify-content: space-evenly;
@@ -594,10 +573,6 @@ footer img{
     text-align: left;
     border-bottom: 1px #000 solid;
 
-}
-
-.store-info p{
-    text-align: left;
 }
 
 .google-map{
@@ -739,13 +714,14 @@ textarea{
 }
 
 .thanks-msg p{
+    text-align: center;
     margin-bottom: 25px;
 }
 
 .redirect-home-btn{
     padding: 20px 50px;
     color: #000;
-    background-color: rgb(251, 216, 216);
+    background-color: #FFE2EE;
 }
 
 .center-item{
